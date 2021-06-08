@@ -2,6 +2,8 @@
 
 For bootstrapping nextjs servers which will deliver HTDB content.
 
+A primer for the [HTDB language is here](http://htdb.org/htdb/docs/scripting/syntax.html)
+
 # Install
 
 ```
