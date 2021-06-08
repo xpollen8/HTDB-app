@@ -1,0 +1,3 @@
+#define	images	/images
+#define	header	<head></head>
+#define	footer	<footer></footer>

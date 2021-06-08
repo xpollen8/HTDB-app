@@ -1,0 +1,4 @@
+#define	index.html
+	${header}
+	Hello world!
+	${footer}
