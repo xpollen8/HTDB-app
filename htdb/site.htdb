@@ -1,4 +1,11 @@
+#define	TheMessage	Hello world
+#define	a The
+#define	b Message
+#
+#	expansions can be recursive
+#
+#define	message ${${a}${b}}
 #define	index.html
 	${header}
-	Hello world!
+	${message}
 	${footer}
