@@ -1,14 +1,19 @@
 import Head from 'next/head'
+import HTDB from 'HTDBjs';
 
-export async function getServerSideProps({ query = {} }) {
-	const id = query.id || 0;
-	const { results, errors } = await (require('../lib/fetch_data'))(`/api/${id}`);
+let htdb;
+
+export async function getServerSideProps({ query: { path = [] } = {} }) {
+	if (!htdb) {
+		htdb = new HTDB(0);
+	}
+
 	return {
-		props: { id, ...results }
+		props: { body: await htdb.render(path.join('/')) }
 	}
 }
 
-const App = ({ id, body }) => (
+const App = ({ body }) => (
 	<div className="container">
 		<Head>
 			<title>HTDB-based application</title>
