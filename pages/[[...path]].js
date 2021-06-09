@@ -8,7 +8,8 @@ let htdb;
 
 export async function getServerSideProps({ query: { path = [] } = {} }) {
 	if (!htdb) {
-		htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 0);
+		console.log("SET ROOT", serverRuntimeConfig.PROJECT_ROOT);
+		htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);
 	}
 
 	return {
