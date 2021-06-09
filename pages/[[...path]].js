@@ -1,11 +1,14 @@
+import getConfig from 'next/config'
 import Head from 'next/head'
 import HTDB from 'HTDBjs';
+
+const { serverRuntimeConfig } = getConfig()
 
 let htdb;
 
 export async function getServerSideProps({ query: { path = [] } = {} }) {
 	if (!htdb) {
-		htdb = new HTDB(0);
+		htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 0);
 	}
 
 	return {
