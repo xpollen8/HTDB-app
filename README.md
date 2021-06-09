@@ -34,3 +34,24 @@ via _serverless_ methods.
 HTDBjs attempts to bridge these worlds, by allowing a modern nextjs/React application
 to be able to parse and deliver the older HTDB documents without much fuss.
 
+# Announcement!
+
+A 20-year goal of making HTDB be an arbitrary way to manage sophisticated "living"
+documents has just been realized.
+
+HTDB now allows one to embed javascript _directly_ into your documents.
+
+```
+#define	thing	This is a random sentence
+#define	index.html
+	Hello World!
+
+	This is the date: ${js( return Date();)}
+
+	Here is an example, where JS has access to HTDB definitions:
+
+	${js(
+		const thing = getval('thing');
+		return thing.replace('random', 'crazy');
+	)}
+```
