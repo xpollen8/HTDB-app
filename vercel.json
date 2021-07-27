@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/[[...path]].js": {
+    "api/*.js": {
       "includeFiles": "_templates/**"
     }
   }
