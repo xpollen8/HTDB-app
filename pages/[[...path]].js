@@ -2,27 +2,15 @@ import getConfig from 'next/config'
 import Head from 'next/head'
 import HTDB from 'HTDBjs';
 
-const { serverRuntimeConfig } = getConfig()
+const { publicRuntimeConfig } = getConfig()
 
 let htdb;
-
-/*
-export async function getServerSideProps({ query: { path = [] } = {} }) {
-	if (!htdb) {
-		htdb = new HTDB(process.cwd(), 1);
-	}
-
-	return {
-		props: { body: await htdb.render(path.join('/')) }
-	}
-}
-*/
 
 export async function getStaticProps({ params: { path = [] } = {} }) {
 	console.log("ARGS", path, serverRuntimeConfig.PROJECT_ROOT);
 	//https://nextjs.org/docs/basic-features/data-fetching#getstaticpaths-static-generation
 	if (!htdb) {
-		htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);
+		htdb = new HTDB(publicRuntimeConfig.staticFolder, 1);
 	}
 
 	return {

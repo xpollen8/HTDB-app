@@ -1,9 +1,9 @@
 module.exports = {
   publicRuntimeConfig: {
     // Will be available on both server and client
-    staticFolder: 'htdocs',
+    staticFolder: '/htdocs',
   },
 	serverRuntimeConfig: {
-		PROJECT_ROOT: __dirname,
+		PROJECT_ROOT: join(__dirname, 'htdocs'),
 	},
 }
