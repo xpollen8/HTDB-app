@@ -1,3 +1,4 @@
+#include misc
 #define	TheMessage	Hello world
 #define	a The
 #define	b Message
