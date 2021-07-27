@@ -1,7 +1,7 @@
 {
   "functions": {
     "[[...path]].js": {
-      "includeFiles": "../htdb/**"
+      "includeFiles": "htdb/**"
     }
   }
 }
