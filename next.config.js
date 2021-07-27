@@ -4,6 +4,6 @@ module.exports = {
     staticFolder: '/htdocs',
   },
 	serverRuntimeConfig: {
-		PROJECT_ROOT: join(__dirname, 'htdocs'),
+		PROJECT_ROOT: __dirname + '/htdocs',
 	},
 }
