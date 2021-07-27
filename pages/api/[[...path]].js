@@ -5,7 +5,7 @@ const { serverRuntimeConfig } = getConfig()
 let htdb;
 
 const handler = async (req, res) => {
-	console.log("URL", req.url);
+	console.log("URL", req.url, __dirname);
 	if (!htdb) {
 		htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);
 	}
