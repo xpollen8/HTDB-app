@@ -1,7 +1,7 @@
 {
   "functions": {
     "api/*.js": {
-      "includeFiles": "htdb/**"
+      "includeFiles": "/htdb/**"
     }
   }
 }
