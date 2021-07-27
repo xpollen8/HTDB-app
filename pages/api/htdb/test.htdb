@@ -1,4 +1,0 @@
-#define	index.html
-	${morse(hello world)} BUH!
-#define	about.html
-	This is the about page
