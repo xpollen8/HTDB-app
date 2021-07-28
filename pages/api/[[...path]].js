@@ -6,13 +6,11 @@ const { serverRuntimeConfig } = getConfig()
 let htdb;
 
 const handler = async (req, res) => {
-	console.log("URL", req.url, __dirname);
 	if (!htdb) {
 		if (process.env.NODE_ENV === "production") {
-			console.log("PATH", path.join(process.cwd(), ".next/server/chunks"));
-			htdb = new HTDB(path.join(process.cwd(), ".next/server/chunks"), 1);
+			//htdb = new HTDB(path.join(process.cwd(), ".next/server/chunks"), 0);
+			htdb = new HTDB(path.join(process.cwd(), ".next"), 0);
 		} else {
-			console.log("PATH", serverRuntimeConfig.PROJECT_ROOT);
 			htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);
 		}
 	}
