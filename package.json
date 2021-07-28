@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "copy-webpack-plugin": "^9.0.1",
     "HTDBjs": "git+https://github.com/xpollen8/HTDBjs.git",
     "next": "^10.0.0",
     "react": "17.0.1",
