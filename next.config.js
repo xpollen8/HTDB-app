@@ -8,10 +8,6 @@ module.exports = {
 	serverRuntimeConfig: {
 		PROJECT_ROOT: __dirname,
 	},
-	  "rewrites": [
-		    { "source": "/api/:path", "destination": "/api/$path" },
-				    { "source": "/:path", "destination": "/api/$path" }
-						  ],
 	target: "server",
 	future: {
 			webpack5: true,
