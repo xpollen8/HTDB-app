@@ -12,7 +12,7 @@ $ npm i
 $ npm run dev
 ```
 
-Then visit `http://localhost:3002` with a browser.
+Then visit `http://localhost:3000` with a browser.
 
 # What it is
 
