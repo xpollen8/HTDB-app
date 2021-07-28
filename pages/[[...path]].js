@@ -1,4 +1,4 @@
-import * as PATH from "path";
+import { join } from "path";
 import getConfig from 'next/config'
 import Head from 'next/head'
 import HTDB from 'HTDBjs';
@@ -10,7 +10,7 @@ let htdb;
 export async function getServerSideProps({ params: { path = [] } = {} }) {
 	if (!htdb) {
 		if (process.env.NODE_ENV === "production") {
-			htdb = new HTDB(PATH.join(process.cwd(), ".next/server/chunks"), 0);
+			htdb = new HTDB(join(process.cwd(), ".next/server/chunks"), 0);
 		} else {
 			const { serverRuntimeConfig } = getConfig();
 			htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);

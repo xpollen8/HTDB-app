@@ -12,23 +12,23 @@ $ npm i
 $ npm run dev
 ```
 
-Then visit `http://localhost:3000` with a browser.
+Then visit `http://localhost:3000` with a browser to see a simple htdb file based website being rendered.
 
 # What it is
 
-HTDB is a very old web technology (dating from 1994), and was initially written in C
+HTDB is a very old web technology (dating from 1994), was written in C
 and used as a fast-cgi module for apache web servers.
 
-Its claim to fame is a relatively simple way to manage multiple web pages inside documents containing related "pages", using a text editor.
+HTDB's advantage over simple HTML files is in its ability to manage multiple "web pages" inside documents containing related "pages", using a text editor.
 
-Those documents would support macro expansions, user-written scripting functions,
+Those .htdb documents support macro expansions, user-written scripting functions,
 as well as a suite of DSO library functions to gain access to more sophisticated
 capabilities: encryption, database, etc
 
 # Why does this exist?
 
 A few people have put significant work into developing HTDB-based websites.
-As times change, the way the world delivers websites is less via apache and more
+As times change, the way the world delivers websites is less via dedicated webservers and more
 via _serverless_ methods.
 
 HTDBjs attempts to bridge these worlds, by allowing a modern nextjs/React application
