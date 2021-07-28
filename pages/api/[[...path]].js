@@ -8,7 +8,7 @@ let htdb;
 const handler = async (req, res) => {
 	if (!htdb) {
 		if (process.env.NODE_ENV === "production") {
-			htdb = new HTDB(path.join(process.cwd(), ".next"), 1);
+			htdb = new HTDB(path.join(process.cwd(), ".next/server/chunks"), 0);
 		} else {
 			htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);
 		}
