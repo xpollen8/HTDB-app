@@ -1,10 +1,10 @@
 const CopyPlugin = require("copy-webpack-plugin")
 
 module.exports = {
-  publicRuntimeConfig: {
-    // Will be available on both server and client
-    staticFolder: '/htdocs',
-  },
+	publicRuntimeConfig: {
+		// Will be available on both server and client
+		staticFolder: '/htdocs',
+	},
 	serverRuntimeConfig: {
 		PROJECT_ROOT: __dirname,
 	},
