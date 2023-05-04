@@ -9,9 +9,9 @@ module.exports = {
 		PROJECT_ROOT: __dirname,
 	},
 	target: "server",
-	future: {
-			webpack5: true,
-	},
+	//future: {
+			//webpack5: true,
+	//},
 	webpack: function (config, { dev, isServer }) {
 			// Fixes npm packages that depend on `fs` module
 			if (!isServer) {
