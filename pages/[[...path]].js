@@ -1,9 +1,6 @@
 import { join } from "path";
-import getConfig from 'next/config'
 import Head from 'next/head'
 import HTDB from 'HTDBjs';
-
-const { serverRuntimeConfig } = getConfig()
 
 let htdb;
 
