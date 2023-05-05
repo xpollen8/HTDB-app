@@ -8,23 +8,23 @@ module.exports = {
 	serverRuntimeConfig: {
 		PROJECT_ROOT: __dirname,
 	},
-	target: "server",
+	//target: "server",
 	//future: {
 			//webpack5: true,
 	//},
 	webpack: function (config, { dev, isServer }) {
 			// Fixes npm packages that depend on `fs` module
-			if (!isServer) {
-					config.resolve.fallback.fs = false
-			}
+			//if (!isServer) {
+					//config.resolve.fallback.fs = false
+			//}
 			// copy files you're interested in
-			if (!dev) {
+			//if (!dev) {
 					config.plugins.push(
 							new CopyPlugin({
-									patterns: [{ from: "htdb/**", to: "." }],
+									patterns: [{ from: "./htdb/**", to: "." }],
 							})
 					)
-			}
+			//}
 
 			return config
 	},
