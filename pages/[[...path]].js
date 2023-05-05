@@ -9,7 +9,7 @@ let htdb;
 
 export async function getServerSideProps({ params: { path = [] } = {} }) {
 	if (!htdb) {
-		const rootHTDB = join(process.cwd(), '.');
+		const rootHTDB = join(process.cwd(), 'pages');
 		htdb = new HTDB(rootHTDB, 0);
 	}
 
