@@ -1,4 +1,4 @@
-const CopyPlugin = require("copy-webpack-plugin")
+//const CopyPlugin = require("copy-webpack-plugin")
 
 //
 //module.exports = {
@@ -31,14 +31,14 @@ const CopyPlugin = require("copy-webpack-plugin")
 ////	},
 //}
 
-const withConfig = require("next-config");
-module.exports = withConfig({
-  webpack(config, options) {
-		config.plugins.push(
-				new CopyPlugin({
-						patterns: [{ from: "htdb/**", to: "." }],
-				})
-		)
-    return config;
-  }
-});
+//const withConfig = require("next-config");
+//module.exports = withConfig({
+//  webpack(config, options) {
+//		config.plugins.push(
+//				new CopyPlugin({
+//						//patterns: [{ from: "htdb/**", to: "." }],
+//				})
+//		)
+//    return config;
+//  }
+//);
