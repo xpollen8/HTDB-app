@@ -9,6 +9,9 @@ let htdb;
 
 export async function getServerSideProps({ params: { path = [] } = {} }) {
 	if (!htdb) {
+		const rootHTDB = join(process.cwd(), 'pages');
+		htdb = new HTDB(rootHTDB, 1);
+		/*
 		if (process.env.NODE_ENV === "production") {
 			console.log("PROD");
 			htdb = new HTDB(join(process.cwd(), ".next/server/chunks"), 0);
@@ -19,6 +22,7 @@ export async function getServerSideProps({ params: { path = [] } = {} }) {
 			console.log("!PROD.path", serverRuntimeConfig.PROJECT_ROOT);
 			htdb = new HTDB(serverRuntimeConfig.PROJECT_ROOT, 1);
 		}
+		*/
 	}
 
 	return {
